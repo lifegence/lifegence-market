@@ -1,0 +1,47 @@
+{
+ "app": "lifegence_market",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "trending-up",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "銘柄一覧",
+   "link_to": "Stock Master",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "株価データ",
+   "link_to": "Stock Price",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "設定",
+   "link_to": "Market Settings",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "module": "Market Data",
+ "name": "Market Data",
+ "owner": "Administrator",
+ "standard": 0,
+ "title": "Market Data"
+}
