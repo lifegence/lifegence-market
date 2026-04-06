@@ -1,0 +1,74 @@
+{
+	"actions": [],
+	"creation": "2026-04-06 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"api_section",
+		"openbb_api_url",
+		"default_provider",
+		"column_break_api",
+		"api_timeout",
+		"auto_fetch_prices"
+	],
+	"fields": [
+		{
+			"fieldname": "api_section",
+			"fieldtype": "Section Break",
+			"label": "OpenBB API"
+		},
+		{
+			"default": "http://localhost:6900",
+			"fieldname": "openbb_api_url",
+			"fieldtype": "Data",
+			"label": "OpenBB API URL",
+			"reqd": 1
+		},
+		{
+			"default": "yfinance",
+			"fieldname": "default_provider",
+			"fieldtype": "Select",
+			"label": "Default Provider",
+			"options": "yfinance"
+		},
+		{
+			"fieldname": "column_break_api",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "30",
+			"fieldname": "api_timeout",
+			"fieldtype": "Int",
+			"label": "API Timeout (sec)"
+		},
+		{
+			"default": "1",
+			"fieldname": "auto_fetch_prices",
+			"fieldtype": "Check",
+			"label": "Auto Fetch Prices (Daily)"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"issingle": 1,
+	"links": [],
+	"modified": "2026-04-06 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Market Data",
+	"name": "Market Settings",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"email": 1,
+			"print": 1,
+			"read": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

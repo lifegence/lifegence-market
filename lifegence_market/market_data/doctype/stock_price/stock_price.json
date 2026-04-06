@@ -1,0 +1,115 @@
+{
+	"actions": [],
+	"autoname": "format:{stock}-{date}",
+	"creation": "2026-04-06 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"stock",
+		"stock_symbol",
+		"date",
+		"column_break_price",
+		"open_price",
+		"high",
+		"low",
+		"close_price",
+		"section_break_volume",
+		"volume",
+		"column_break_meta",
+		"provider"
+	],
+	"fields": [
+		{
+			"fieldname": "stock",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Stock",
+			"options": "Stock Master",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "stock.symbol",
+			"fieldname": "stock_symbol",
+			"fieldtype": "Data",
+			"label": "Symbol",
+			"read_only": 1
+		},
+		{
+			"fieldname": "date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_price",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "open_price",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Open"
+		},
+		{
+			"fieldname": "high",
+			"fieldtype": "Float",
+			"label": "High"
+		},
+		{
+			"fieldname": "low",
+			"fieldtype": "Float",
+			"label": "Low"
+		},
+		{
+			"fieldname": "close_price",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Close"
+		},
+		{
+			"fieldname": "section_break_volume",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "volume",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Volume"
+		},
+		{
+			"fieldname": "column_break_meta",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "yfinance",
+			"fieldname": "provider",
+			"fieldtype": "Data",
+			"label": "Provider",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-04-06 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Market Data",
+	"name": "Stock Price",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1
+		}
+	],
+	"sort_field": "date",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

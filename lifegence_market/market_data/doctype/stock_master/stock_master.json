@@ -1,0 +1,141 @@
+{
+	"actions": [],
+	"autoname": "field:symbol",
+	"creation": "2026-04-06 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"basic_section",
+		"symbol",
+		"stock_name",
+		"stock_name_en",
+		"column_break_basic",
+		"exchange",
+		"currency",
+		"sector",
+		"is_active",
+		"price_section",
+		"last_price",
+		"column_break_price",
+		"last_price_date",
+		"notes_section",
+		"notes"
+	],
+	"fields": [
+		{
+			"fieldname": "basic_section",
+			"fieldtype": "Section Break",
+			"label": "Basic Info"
+		},
+		{
+			"fieldname": "symbol",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Symbol",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "stock_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Stock Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "stock_name_en",
+			"fieldtype": "Data",
+			"label": "Stock Name (EN)"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "TSE/Tokyo",
+			"fieldname": "exchange",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Exchange",
+			"options": "TSE/Tokyo\nNYSE\nNASDAQ\nOther"
+		},
+		{
+			"default": "JPY",
+			"fieldname": "currency",
+			"fieldtype": "Link",
+			"label": "Currency",
+			"options": "Currency"
+		},
+		{
+			"fieldname": "sector",
+			"fieldtype": "Data",
+			"label": "Sector"
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Active"
+		},
+		{
+			"fieldname": "price_section",
+			"fieldtype": "Section Break",
+			"label": "Latest Price"
+		},
+		{
+			"fieldname": "last_price",
+			"fieldtype": "Currency",
+			"label": "Last Price",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_price",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "last_price_date",
+			"fieldtype": "Date",
+			"label": "Last Price Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "notes_section",
+			"fieldtype": "Section Break",
+			"label": "Notes",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Small Text",
+			"label": "Notes"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-04-06 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Market Data",
+	"name": "Stock Master",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"show_title_field_in_link": 1,
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "stock_name",
+	"track_changes": 1
+}
