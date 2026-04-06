@@ -11,7 +11,7 @@ def fetch_stock_prices(stock_name):
 
 	stock = frappe.get_doc("Stock Master", stock_name)
 	client = OpenBBClient()
-	_fetch_and_store_prices(client, {"name": stock.name, "symbol": stock.symbol})
+	_fetch_and_store_prices(client, frappe._dict({"name": stock.name, "symbol": stock.symbol}))
 	frappe.db.commit()
 	return {"status": "ok", "symbol": stock.symbol}
 
