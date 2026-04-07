@@ -7,6 +7,7 @@
  "icon_type": "App",
  "idx": 0,
  "label": "\u682a\u5f0f\u5e02\u5834",
+ "logo_url": "/assets/lifegence_market/images/logo.svg",
  "link": "/app/stock-master",
  "link_type": "External",
  "name": "Lifegence Market",
