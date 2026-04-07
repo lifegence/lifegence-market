@@ -14,7 +14,7 @@ add_to_apps_screen = [
 		"name": app_name,
 		"logo": "/assets/lifegence_market/images/logo.svg",
 		"title": "株式市場",
-		"route": "/app/stock-master",
+		"route": "/app/market-dashboard",
 	}
 ]
 

@@ -1,0 +1,77 @@
+<div class="market-dashboard">
+	<!-- Header: Stock Selector + Period -->
+	<div class="market-header">
+		<div class="stock-selector-group">
+			<select class="form-control stock-select">
+				<option value="">{{ __("銘柄を選択...") }}</option>
+			</select>
+			<div class="stock-info-inline">
+				<span class="stock-name-label"></span>
+				<span class="stock-exchange-badge"></span>
+			</div>
+		</div>
+		<div class="period-selector">
+			<button class="btn btn-xs btn-default period-btn" data-period="1W">1W</button>
+			<button class="btn btn-xs btn-default period-btn" data-period="1M">1M</button>
+			<button class="btn btn-xs btn-default period-btn" data-period="3M">3M</button>
+			<button class="btn btn-xs btn-default period-btn active" data-period="6M">6M</button>
+			<button class="btn btn-xs btn-default period-btn" data-period="1Y">1Y</button>
+			<button class="btn btn-xs btn-default period-btn" data-period="ALL">ALL</button>
+		</div>
+	</div>
+
+	<!-- Metric Cards -->
+	<div class="metric-cards">
+		<div class="metric-card">
+			<div class="metric-label">{{ __("現在値") }}</div>
+			<div class="metric-value" data-metric="last_price">--</div>
+			<div class="metric-sub" data-metric="last_date"></div>
+		</div>
+		<div class="metric-card">
+			<div class="metric-label">{{ __("前日比") }}</div>
+			<div class="metric-value" data-metric="change">--</div>
+			<div class="metric-sub" data-metric="change_pct"></div>
+		</div>
+		<div class="metric-card">
+			<div class="metric-label">{{ __("出来高") }}</div>
+			<div class="metric-value" data-metric="volume">--</div>
+		</div>
+		<div class="metric-card">
+			<div class="metric-label">{{ __("本日") }}</div>
+			<div class="metric-value metric-range">
+				<span data-metric="low">--</span>
+				<span class="metric-sep">〜</span>
+				<span data-metric="high">--</span>
+			</div>
+		</div>
+		<div class="metric-card">
+			<div class="metric-label">{{ __("52週") }}</div>
+			<div class="metric-value metric-range">
+				<span data-metric="low_52w">--</span>
+				<span class="metric-sep">〜</span>
+				<span data-metric="high_52w">--</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Chart Area -->
+	<div class="chart-container">
+		<div class="chart-placeholder">
+			<span class="text-muted">{{ __("銘柄を選択してチャートを表示") }}</span>
+		</div>
+		<div id="price-chart" style="display:none;"></div>
+		<div id="volume-chart" style="display:none;"></div>
+	</div>
+
+	<!-- Stock List -->
+	<div class="stock-list-section">
+		<h5>{{ __("登録銘柄") }}</h5>
+		<div class="stock-list-table"></div>
+	</div>
+
+	<!-- OpenBB Status -->
+	<div class="openbb-status">
+		<span class="status-indicator"></span>
+		<span class="status-text">{{ __("OpenBB") }}</span>
+	</div>
+</div>

@@ -10,6 +10,17 @@
    "collapsible": 1,
    "indent": 0,
    "keep_closed": 0,
+   "label": "ダッシュボード",
+   "link_to": "market-dashboard",
+   "link_type": "Page",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
    "label": "銘柄一覧",
    "link_to": "Stock Master",
    "link_type": "DocType",

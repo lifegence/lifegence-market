@@ -1,0 +1,215 @@
+.market-dashboard {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* Header */
+.market-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.stock-selector-group {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex: 1;
+	min-width: 300px;
+}
+
+.stock-selector-group .stock-select {
+	max-width: 320px;
+}
+
+.stock-info-inline {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.stock-name-label {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.stock-exchange-badge {
+	font-size: 11px;
+	padding: 2px 8px;
+	border-radius: 4px;
+	background: var(--subtle-accent);
+	color: var(--text-muted);
+}
+
+/* Period selector */
+.period-selector {
+	display: flex;
+	gap: 4px;
+}
+
+.period-btn {
+	min-width: 40px;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 4px;
+}
+
+.period-btn.active {
+	background-color: var(--primary);
+	color: #fff;
+	border-color: var(--primary);
+}
+
+/* Metric Cards */
+.metric-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.metric-card {
+	padding: 12px 16px;
+	border-radius: 8px;
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+}
+
+.metric-label {
+	font-size: 11px;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 4px;
+}
+
+.metric-value {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--text-color);
+	font-variant-numeric: tabular-nums;
+}
+
+.metric-value.metric-range {
+	font-size: 16px;
+}
+
+.metric-sep {
+	color: var(--text-muted);
+	margin: 0 2px;
+}
+
+.metric-sub {
+	font-size: 12px;
+	color: var(--text-muted);
+	margin-top: 2px;
+}
+
+.metric-value.positive,
+.metric-sub.positive {
+	color: #26a69a;
+}
+
+.metric-value.negative,
+.metric-sub.negative {
+	color: #ef5350;
+}
+
+/* Chart */
+.chart-container {
+	margin-bottom: 24px;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid var(--border-color);
+	background: var(--card-bg);
+}
+
+.chart-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	font-size: 14px;
+}
+
+#price-chart,
+#volume-chart {
+	width: 100%;
+}
+
+/* Stock list */
+.stock-list-section {
+	margin-top: 24px;
+}
+
+.stock-list-section h5 {
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+.stock-table {
+	margin-bottom: 0;
+}
+
+.stock-table thead th {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--text-muted);
+	border-bottom: 2px solid var(--border-color);
+}
+
+.stock-table .stock-row:hover {
+	background-color: var(--subtle-accent);
+}
+
+.stock-row.active-stock {
+	background-color: var(--control-bg);
+}
+
+.stock-table .badge {
+	font-size: 10px;
+	font-weight: 500;
+	padding: 2px 6px;
+	background: var(--subtle-accent);
+	color: var(--text-muted);
+}
+
+/* OpenBB status */
+.openbb-status {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 20px;
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	font-size: 11px;
+	color: var(--text-muted);
+	z-index: 100;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-indicator {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+	background: var(--text-muted);
+}
+
+.status-indicator.green {
+	background: #26a69a;
+}
+
+.status-indicator.red {
+	background: #ef5350;
+}
