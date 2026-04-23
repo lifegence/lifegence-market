@@ -203,6 +203,8 @@ jobs:
           USER2_PWD: e2etest123
           EVIDENCE: ${{ github.event.inputs.evidence == 'true' && '1' || '' }}
           ORPHAN_STRICT: ${{ github.event.inputs.strict_orphan == 'true' && '1' || '' }}
+          # No OpenBB docker stack in CI; skip 00-external/ health specs.
+          SKIP_EXTERNAL: '1'
         run: npx playwright test --project=chromium-local
 
       - name: Upload HTML report
